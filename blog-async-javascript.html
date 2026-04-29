@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding Asynchronous JavaScript Without the Hand-Waving</title>
+    <meta name="description" content="A practical guide to asynchronous JavaScript, covering promises, async and await, queues, and real-world mental models." />
+    <link rel="canonical" href="https://kiran300-cell.github.io/portfolio/blog-async-javascript.html" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><strong>R Kiran Kumar</strong><span>IoT | Robotics | Embedded Systems</span></a><nav class="nav-links"><a data-nav href="index.html">Home</a><a data-nav href="blog.html">Blog</a><a data-nav href="projects.html">Projects</a><a data-nav href="contact.html">Contact</a></nav></div></header>
+      <main><section class="article-header section"><span class="eyebrow">JavaScript</span><h1>Understanding Asynchronous JavaScript Without the Hand-Waving</h1><p>Async JavaScript becomes much easier once the mental model is concrete instead of magical.</p></section><section class="section article-layout"><article class="article-body"><p>Many developers first learn asynchronous JavaScript through syntax before they really understand flow. That often leads to code that works but still feels unpredictable when callbacks, promises, timers, and network requests start mixing together.</p><p>The biggest unlock is thinking in terms of scheduling. JavaScript runs on a single main thread for your code, but the environment around it can manage timers, I/O, and browser events. When that work completes, callbacks and promise continuations are placed into queues and executed when the current stack clears.</p><p>Promises improved readability because they let asynchronous work behave more like values in motion. `async` and `await` improved it further by making sequencing easier to read. But readability does not remove complexity. You still need to understand what is parallel, what is sequential, and where errors can escape if they are not handled deliberately.</p><p>In practice, good async code is less about syntax and more about structure. Group related tasks, avoid accidental serialization, fail clearly, and make loading and retry states part of the design rather than afterthoughts.</p></article><aside class="sticky-sidebar"><div class="panel"><h3>Keywords</h3><div class="tags"><span>Async JavaScript</span><span>Promises</span><span>Event Loop</span></div></div></aside></section></main>
+      <footer class="site-footer"><div class="footer-box"><p>(c) <span data-year></span> R Kiran Kumar.</p><div class="nav-links"><a href="blog.html">All posts</a><a href="contact.html">Contact</a></div></div></footer>
+    </div>
+  </body>
+</html>
+
+
